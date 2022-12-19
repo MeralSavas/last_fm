@@ -4,6 +4,7 @@ const initialState = {
   artist: [],
   loading: false,
   error: false,
+  darkMode: false,
 };
 
 const fetchSlice = createSlice({
@@ -17,13 +18,18 @@ const fetchSlice = createSlice({
       state.loading = false;
       state.artist = payload;
     },
+
     fetchError: (state) => {
       state.error = true;
       state.loading = false;
     },
+    setDarkMode: (state, { payload }) => {
+      state.darkMode = payload;
+    },
   },
 });
 
-export const { fetchStart, fetchSuccess, fetchError } = fetchSlice.actions;
+export const { fetchStart, fetchSuccess, fetchError, setDarkMode } =
+  fetchSlice.actions;
 
 export default fetchSlice.reducer;
