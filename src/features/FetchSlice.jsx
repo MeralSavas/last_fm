@@ -17,7 +17,7 @@ const fetchSlice = createSlice({
       state.loading = false;
       state.artist = payload;
     },
-    fetchError: (state, { payload }) => {
+    fetchError: (state) => {
       state.error = true;
       state.loading = false;
     },

@@ -1,12 +1,12 @@
 import { Provider } from "react-redux";
 import "./App.css";
-import Store from "./app/Store";
+import store from "./app/Store";
 import Router from "./router/Router";
 
 function App() {
   return (
-    <div className="App">
-      <Provider store={Store}>
+    <div className="bg-grey-100 dark:bg-[#23242a]">
+      <Provider store={store}>
         <Router />
       </Provider>
     </div>
